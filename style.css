@@ -31,6 +31,11 @@ body {
     
 }
 
+.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s
+}
+
 .circle-container {
     position: fixed;
     top: -100px;
@@ -46,6 +51,10 @@ body {
     transition: transform 0.5s linear;
 }
 
+.container.show-nav .circle {
+    transform: rotate(-100deg);
+}
+
 .circle button {
     position: absolute;
     top: 50%;
@@ -56,8 +65,34 @@ body {
     font-size: 26px;
     color: #fff;
     cursor: pointer;
-
 }
+
+nav {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    z-index: 100;
+}
+
+nav ul li {
+    list-style: none;
+    color: #fff;
+    margin: 40px 0;
+    text-transform: uppercase ;
+    transform: translateX(150%); 
+    transition: transform .5s ease;
+}
+
+
+
+
+
+nav ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+
 
 
 .circle button:focus {
@@ -71,12 +106,30 @@ body {
 
 
 .circle button#close {
-    top: 40%;
     transform: rotate(90deg);
     transform-origin: top right;  
 }
 
 .container img {
     max-width: 100%;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.content h1 {
+    margin: 0;
+}
+
+.content small {
+    color: #555;
+    font-style: italic;
+}
+
+.content p {
+    color: #333;
+    line-height: 1.5;
 }
 
